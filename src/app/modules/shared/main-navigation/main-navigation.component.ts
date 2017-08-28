@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'main-nav',
+    selector: 'app-main-nav',
     templateUrl: 'main-navigation.component.html'
 })
 

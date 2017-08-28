@@ -3,17 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/home/home.component';
-import { SharedModule } from './modules/shared';
 import { AppRoutingModule } from './app.routing.module';
-
+import { HeaderComponent } from './modules/shared/header/header.component';
+import { MainNavigationComponent} from './modules/shared/main-navigation/main-navigation.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    MainNavigationComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     AppRoutingModule
   ],
   providers: [],
