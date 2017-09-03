@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './modules/home/home.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { HomeComponent } from './../components/home.component/home.component';
 import { AppRoutingModule } from './app.routing.module';
-import { HeaderComponent } from './modules/shared/header/header.component';
-import { MainNavigationComponent} from './modules/shared/main-navigation/main-navigation.component';
+import { HeaderComponent } from './../components/header.component/header.component';
+import { MainNavigationComponent} from './../components/main-navigation.component/main-navigation.component';
+import { DataService } from './../services/data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,9 +17,11 @@ import { MainNavigationComponent} from './modules/shared/main-navigation/main-na
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    NgxPaginationModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
